@@ -3,15 +3,18 @@ const path= require('path');
 const bodyParser=require('body-parser');
 const app=express();
 
-const message=require('./routes/message');
-const user=require('./routes/user');
+const addproduct=require('./routes/admin');
+const shop=require('./routes/shop');
+const contact=require('./routes/contact');
+const success=require('./routes/success');
 
 app.use(bodyParser.urlencoded({extended:false})); 
 app.use(express.static(path.join(__dirname,'public'))); //css
 
-
-app.use(message);
-app.use('/',user);
+app.use('/admin',addproduct);
+app.use(shop);
+app.use(contact);
+app.use(success);
 
 
 app.use((req,res,next)=>{
