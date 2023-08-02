@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/shop.css">
+    <title>Add User</title>
+
+</head>
+
+<body>
+    <main>
+     <form class="product-form" 
+ onsubmit="document.getElementById('username').value=localStorage.getItem('username')" 
+ action="/" method="POST">
+            <div class="form-control">
+                <label for="title"></label>
+                <input type="text" name="msg" id="msg" >
+                <input type="text" name="username" id="username" >
+            </div>
+            <button type="submit">Add Message</button>
+</form>`
+
+
+    </main>
+</body>
+
+</html>
