@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'public'))); //css
 
 app.use('/admin',addproduct);
-app.use(shop);
+app.use('/',shop);
 app.use(contact);
 app.use(success);
 

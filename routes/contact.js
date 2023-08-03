@@ -3,7 +3,8 @@ const path = require('path');
 const express = require('express');
 const rootdir = require('../utils/path');
 const router = express.Router();
-router.get('/contact', (req, res, next) => {
-  res.sendFile(path.join(rootdir, 'views', 'contact.html'));
-});
+const productcontroller=require('../controllers/productcontroller');
+
+
+router.get('/contact',productcontroller.getContact );
 module.exports = router;
